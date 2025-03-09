@@ -5,6 +5,11 @@
 //修改本配置显示文本和封面链接
 //然后点歌
 
+[rewrite_local]
+^https:\/\/api\.dragonlongzhu\.cn\/.* url script-response-body https://github.com/1181259130/kongcheng/blob/main/mkqqyy.js
+
+[mitm]
+hostname = api.dragonlongzhu.cn
 
 let body = $response.body;
 if (body) {
