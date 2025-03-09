@@ -1,7 +1,7 @@
 /* 
  * 
 [rewrite_local]
-^https:\/\/api\.dragonlongzhu\.cn\/.* url script-response-body https://github.com/1181259130/kongcheng/edit/main/mkqqyy.js
+^https:\/\/api\.dragonlongzhu\.cn\/.* url script-response-body https://raw.githubusercontent.com/zxs-ai/Xnet/refs/heads/main/zzmusicplay.js
 
 [mitm]
 hostname = api.dragonlongzhu.cn
@@ -19,7 +19,7 @@ if (body) {
     let obj = JSON.parse(body);
     if (obj && obj.data) {
       obj.data.song_name = ${obj.data.song_name || ""}-${obj.data.song_singer || ""};
-      obj.data.song_singer = "W.定制电台>>>";
+      obj.data.song_singer = "z先生定制电台>>>";
       obj.data.cover = "http://q4.qlogo.cn/headimg_dl?dst_uin=719883788&spec=640";
     }
     $done({ body: JSON.stringify(obj) });
